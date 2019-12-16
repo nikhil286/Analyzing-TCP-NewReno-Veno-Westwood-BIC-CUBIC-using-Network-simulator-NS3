@@ -32,7 +32,6 @@ Since CUBIC is not included in ns3
 5) To implement TCP CUBIC, copy the tcpcubic.cc and tcpcubic.h files in ns-3.30->src->internet->model folder. Then go to internet   folder->Wscript. Do the following changes-
 Line 163-->Type ‘model/Tcp-cubic.cc’
 Line 402-->Type ‘model/tcp-cubic.h’ and save the file.
-
 Go to the folder ns-3.30 and open terminal there. Type command
 
                         ./waf - -run scratch/tcpcubic.cc
