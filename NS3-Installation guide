@@ -1,0 +1,43 @@
+
+The ns-3 simulator is a discrete-event network simulator targeted primarily for research and educational use. The ns-3 project, started in 2006, is an open-source project developing ns-3. It has been developed to provide an open, extensible network simulation platform, for networking research and education. In brief, ns-3 provides models of how packet data networks work and perform, and provides a simulation engine for users to conduct simulation experiments.
+
+We are installing ns-3 version 3.30 on Ubuntu distribution of Linux 
+(Version 19.04- Disco Dingo).
+Ubuntu can be downloaded from https://ubuntu.com/download/desktop
+The following tools are needed to get started with ns-3:
+C++ compiler                     			 
+	clang++ or g++(g++ version 4.9 or greater)
+Python	python2 version>=2.7.10 or python3   version>=3.4
+Git	any recent version
+Tar	any recent version (to unpack an ns-3 release)
+
+Bunzip2	any recent version (to uncompress an ns-3 release)
+
+Steps to install ns-3:-
+1) Download ns-3 version 3.30 from https://www.nsnam.org. 
+1) Open terminal on Ubuntu desktop.
+2) Move to desktop using command
+                cd Desktop.
+3) Update and Upgrade your system and repositories using command
+               sudo apt-get update && apt-get upgrade.
+4) To install all the required libraries for ns-3 to work use command 
+sudo apt-get install gcc g++ python python-dev mercurial bzr gdb valgrind gsl-bin libgsl0-dev libgsl0ldbl flex bison tcpdump sqlite sqlite3 libsqlite3-dev libxml2 libxml2-dev libgtk2.0-0 libgtk2.0-dev uncrustify doxygen graphviz imagemagick texlive texlive-latex-extra texlive-generic-extra texlive-generic-recommended texinfo dia texlive texlive-latex-extra texlive-extra-utils texlive-generic-recommended texi2html python-pygraphviz python-kiwi python-pygoocanvas libgoocanvas-dev python-pygccxml.
+5) After the libraries are successfully installed (could take a while), extract the ns-3    archive saved on the desktop previously by simply using the command
+                tar –xvf ns-allinone-3.29.tar.bz
+Once it is extracted a folder named ns-allinone-3.29 appears on the desktop.
+6) Move to ns-3 folder using
+    	     cd ns-allinone-3.29
+7) Now to enable the examples and test files (already present in ns-3) type command
+	     ./build.py  - -enable-examples  - -enable-tests
+    In this way ns-3 is finally installed.
+To run sample script:-
+1) Move to ns-allinone-3.29 examples  tutorial folder
+                 cd ns-allinone-3.29/examples/tutorial <first move to desktop>
+2) Tutorial file contains some examples. Copy any example in scratch folder by
+	      cp first.cc ../../scratch
+3) Move to directory ns-allinone-3.29
+                 cd ../..
+4) Run first.cc <example> using command
+         	      . /waf  - -run scratch/first <filename>
+
+--------------------------SUCCESSFULLY INSTALLED--------------------------
