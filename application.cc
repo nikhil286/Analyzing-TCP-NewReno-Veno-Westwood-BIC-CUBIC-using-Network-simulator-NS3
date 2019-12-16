@@ -79,6 +79,7 @@ MyApp::StartApplication(void) {
 	m_socket->Bind();
 	m_socket->Connect(m_peer);
 	SendPacket();
+	
 }
 
 void
